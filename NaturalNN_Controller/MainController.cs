@@ -91,6 +91,11 @@ namespace NaturalNN_Controller
             return MongoConnection.MongoConnection.SymbolList();
         }
 
+        public List<string> GetSymbolsSql()
+        {
+            return SqlConnection.SqlConnection.SymbolList();
+        }
+
         public DateTime GetMinDate()
         {
             if (!MC) { throw new Exception("Not Connected"); }

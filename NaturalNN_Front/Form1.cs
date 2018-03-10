@@ -155,14 +155,27 @@ namespace NaturalNN_Front
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            InitMongoData();
+            //InitMongoData();
+            InitSqlData();
             textBoxShape.Text = @"5,1";
 
+        }
+
+        private void InitSqlData()
+        {
+            List<string> symbols = _mainController.GetSymbolsSql();
+            DisplaySymbols(symbols);
         }
 
         private void InitMongoData()
         {
             List<string> symbols = _mainController.GetSymbols();
+            DisplaySymbols(symbols);
+
+        }
+
+        private void DisplaySymbols(List<string> symbols)
+        {
             listBoxSymbol.Items.AddRange(symbols.ToArray());
             DateTime minDate = _mainController.GetMinDate();
             dateTimePickerStartDate.MinDate = minDate;
@@ -175,7 +188,6 @@ namespace NaturalNN_Front
 
             DateTime EndDate = dateTimePickerStartDate.Value.AddSeconds(Convert.ToDouble(numericUpDownTrainingLapse.Value));
             labelEndDate.Text = "EndDate = " + EndDate.ToShortDateString() + " / " + EndDate.ToLongTimeString();
-
         }
 
         private void buttonTest_Click(object sender, EventArgs e)

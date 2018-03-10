@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ChipreDataSet" targetNamespace="http://tempuri.org/ChipreDataSet.xsd" xmlns:mstns="http://tempuri.org/ChipreDataSet.xsd" xmlns="http://tempuri.org/ChipreDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BinaryDataConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BinaryDataConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SqlConnection.Properties.Settings.GlobalReference.Default.BinaryDataConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="RatesTableAdapter" GeneratorDataComponentClassName="RatesTableAdapter" Name="Rates" UserDataComponentName="RatesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BinaryDataConnectionString (Settings)" DbObjectName="BinaryData.dbo.Rates" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillSymbols" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataSymbols" GeneratorSourceName="FillSymbols" GetMethodModifier="Public" GetMethodName="GetDataSymbols" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataSymbols" UserSourceName="FillSymbols">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT Distinct rateName FROM dbo.Rates</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="rateName" DataSetColumn="rateName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ChipreDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ChipreDataSet" msprop:Generator_UserDSName="ChipreDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Rates" msprop:Generator_TableClassName="RatesDataTable" msprop:Generator_TableVarName="tableRates" msprop:Generator_RowChangedName="RatesRowChanged" msprop:Generator_TablePropName="Rates" msprop:Generator_RowDeletingName="RatesRowDeleting" msprop:Generator_RowChangingName="RatesRowChanging" msprop:Generator_RowEvHandlerName="RatesRowChangeEventHandler" msprop:Generator_RowDeletedName="RatesRowDeleted" msprop:Generator_RowClassName="RatesRow" msprop:Generator_UserTableName="Rates" msprop:Generator_RowEvArgName="RatesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rateName" msprop:Generator_ColumnVarNameInTable="columnrateName" msprop:Generator_ColumnPropNameInRow="rateName" msprop:Generator_ColumnPropNameInTable="rateNameColumn" msprop:Generator_UserColumnName="rateName">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

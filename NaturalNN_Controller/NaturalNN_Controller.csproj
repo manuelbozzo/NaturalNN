@@ -56,6 +56,10 @@
       <Project>{24e1e359-c6c2-4bbb-a19f-d9efa80f75df}</Project>
       <Name>NaturalNN_Engine</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SqlConnection\SqlConnection.csproj">
+      <Project>{30acb493-a25c-4179-99cf-fd17f2ff32de}</Project>
+      <Name>SqlConnection</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
