@@ -55,7 +55,16 @@ namespace SqlConnection
 
         private static double GetLastValue(string rateName, DateTime rateDate)
         {
-            throw new NotImplementedException();
+            var response = RLVTA.GetData(rateName, rateDate);
+
+            if (response.Rows.Count == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return 0;
+            }
         }
     }
 }
