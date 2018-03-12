@@ -7,9 +7,11 @@
     }
 }
 
-namespace SqlConnection.ChipreDataSetTableAdapters {
-    
-    
-    public partial class RatesTableAdapter {
+namespace SqlConnection.ChipreDataSetTableAdapters
+{
+
+
+    public partial class RatesSymbolsTableAdapter
+    {
     }
 }

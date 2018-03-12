@@ -112,8 +112,7 @@ namespace NaturalNN_Front
 
         private void buttonGenerateTrainInput_Click(object sender, EventArgs e)
         {
-            _mainController.GenerateTrainInputCompressed(dateTimePickerStartDate.Value, dateTimePickerStartDate.Value.AddSeconds(Convert.ToDouble(numericUpDownTrainingLapse.Value)));
-            _mainController.GenerateTrainInputCompressedVariation(dateTimePickerStartDate.Value, dateTimePickerStartDate.Value.AddSeconds(Convert.ToDouble(numericUpDownTrainingLapse.Value)), 5);
+            _mainController.GenerateTrainInputCompressedSql(dateTimePickerStartDate.Value, dateTimePickerStartDate.Value.AddSeconds(Convert.ToDouble(numericUpDownTrainingLapse.Value)));
         }
 
         private void buttonTrain_Click(object sender, EventArgs e)
@@ -179,7 +178,7 @@ namespace NaturalNN_Front
             listBoxSymbol.Items.AddRange(symbols.ToArray());
             DateTime minDate = _mainController.GetMinDate();
             dateTimePickerStartDate.MinDate = minDate;
-            dateTimePickerStartDate.Value = minDate;
+            //dateTimePickerStartDate.Value = minDate;
             DateTime maxDate = _mainController.GetMaxDate();
             labelMinDate.Text = "Min Date = " + minDate.ToShortDateString() + " / " + minDate.ToLongTimeString();
             labelMaxDate.Text = "Max Date = " + maxDate.ToShortDateString() + " / " + maxDate.ToLongTimeString();

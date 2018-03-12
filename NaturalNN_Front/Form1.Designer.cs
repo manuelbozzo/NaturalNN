@@ -362,6 +362,7 @@
             this.dateTimePickerStartDate.Name = "dateTimePickerStartDate";
             this.dateTimePickerStartDate.Size = new System.Drawing.Size(109, 20);
             this.dateTimePickerStartDate.TabIndex = 28;
+            this.dateTimePickerStartDate.Value = new System.DateTime(2018, 2, 14, 0, 0, 0, 0);
             // 
             // labelEndDate
             // 
@@ -398,7 +399,7 @@
             this.numericUpDownTrainingLapse.Size = new System.Drawing.Size(66, 20);
             this.numericUpDownTrainingLapse.TabIndex = 32;
             this.numericUpDownTrainingLapse.Value = new decimal(new int[] {
-            1000,
+            100,
             0,
             0,
             0});

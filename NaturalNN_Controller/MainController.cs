@@ -120,12 +120,9 @@ namespace NaturalNN_Controller
             _inputTrainSetEpochs = MongoConnection.MongoConnection.GetAllTicksEpochsRangeCompressed(startTime, endTime);
         }
         
-        public void GenerateTrainInputCompressedVariation(DateTime startTime, DateTime endTime, int backTimeSeconds)
+        public void GenerateTrainInputCompressedSql(DateTime startTime, DateTime endTime)
         {
-
-            //WIP
-            //_inputTrainSet = MongoConnection.MongoConnection.GetAllTicksRangeCompressedVariation(startTime, endTime, backTimeSeconds);
-            _inputTrainSetEpochs = MongoConnection.MongoConnection.GetAllTicksEpochsRangeCompressed(startTime, endTime);
+            _inputTrainSet = SqlConnection.SqlConnection.GetAllTicksRangeCompressed(startTime, endTime);
         }
 
         public void GenerateTrainOutputCompressed(int fowardSeconds, string symbol)
