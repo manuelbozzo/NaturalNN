@@ -63,7 +63,7 @@ namespace SqlConnection
             }
             else
             {
-                return 0;
+                return response.AsEnumerable().Select(o => o.rateValue).First();
             }
         }
     }
